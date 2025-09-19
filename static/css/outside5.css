@@ -444,50 +444,31 @@ header.masthead .masthead-heading {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
 .marquee {
-height: 50px;
-position: relative;
-background: transparent;
-color: gold;
-#border: 1px solid #4a4a4a;
+  height: 50px;
+  overflow: hidden;       /* keeps it in one line */
+  position: relative;
+  background: transparent;
+  color: gold;
+  white-space: nowrap;
 }
-.marquee z {
-position: absolute;
-height: 100%;
-margin: 0;
--moz-transform: translateX(100%);
--webkit-transform: translateX(100%);
-transform: translateX(100%);
--moz-animation: scroll-left 2s linear infinite;
--webkit-animation: scroll-left 2s linear infinite;
-animation: scroll-left 14s linear infinite;
-}
-@-moz-keyframes scroll-left {
-0% {
--moz-transform: translateX(100%);
-}
-100% {
--moz-transform: translateX(-100%);
-}
-}
-@-webkit-keyframes scroll-left {
-0% {
--webkit-transform: translateX(100%);
-}
-100% {
--webkit-transform: translateX(-100%);
-}
+.marquee span {
+  display: inline-block;
+  position: absolute;
+  will-change: transform;
+  transform: translateX(100%);
+  animation: scroll-left 15s linear infinite;
 }
 @keyframes scroll-left {
-0% {
--moz-transform: translateX(100%);
--webkit-transform: translateX(100%);
-transform: translateX(100%);
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
-100% {
--moz-transform: translateX(-100%);
--webkit-transform: translateX(-100%);
-transform: translateX(-100%);
-}
-}
+
+
+
 

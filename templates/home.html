@@ -5,7 +5,7 @@
         <title>Gold Bank</title>
         <link rel="icon" href="/static/assets/img/logo.jpg">
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-        <link href="{% static 'css/outside.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/outside5.css' %}" rel="stylesheet" />
     </head>
 
     <body id="page-top">
@@ -86,10 +86,15 @@ for (i = 0; i < dropdown.length; i++) {
             <div class="container">
                 <br>
                 <br>
-<!--                        <form action="/action_page.php">-->
-                <div class="marquee" style="white-space:nowrap; width: 240px; float: middle;">
-                 <h3><z>Lastest Gold Price Update: Per One Gram(24K) Gold Price is <a style="color: orange">{{update.gold_price}} BDT</a>, Updated on {{update.date}}</z></h3>
-             </div>
+<!--                <form action="/action_page.php">-->
+                <div class="marquee" style="white-space:nowrap; width: 100%; float: middle;">
+                    <h3>
+                        <span>
+                            Latest Gold Price Update: Per One Gram (24K) Gold Price is
+                            <a style="color: orange">{{update.gold_price}} BDT</a>, Updated on {{update.date}}
+                        </span>
+                    </h3>
+                </div>
                 <div style="color:gainsboro;">
                     <h3>Like Our Facebook Page <a class="btn btn-dark btn-social mx-2" href="https://web.facebook.com/Gold-Bank-103736558274705">
                         <i class="fab fa-facebook"></i></a></h3></div>

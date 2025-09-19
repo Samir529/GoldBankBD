@@ -12,7 +12,7 @@
     {% endif %}
     <h1>Login here</h1>
     <br>
-    <form action="{% url 'goldbankapp:user_login' %}" method="post">
+    <form action="{% url 'gold_bank_app:user_login' %}" method="post">
         {% csrf_token %}
         <label for="username">Username:</label>
         <input type="text" name="username" id="username" placeholder="enter username"/>

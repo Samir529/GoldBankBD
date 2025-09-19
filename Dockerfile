@@ -25,9 +25,6 @@ RUN pip install -r requirements.txt
 # Copy the rest of the application
 COPY . .
 
-# Collect static files (ensure STATIC_ROOT is set in settings.py)
-RUN python manage.py collectstatic --noinput
-
 # Expose port Render will provide
 # Expose default port (optional, Render provides $PORT)
 EXPOSE 8000
