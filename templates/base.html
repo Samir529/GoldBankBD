@@ -1,5 +1,6 @@
-{% load static %}
 <! Doctype html>
+{% load static %}
+{% load humanize %}
 <html>
     <head>
         <title>Gold Bank</title>
@@ -75,25 +76,32 @@ function closeNav() {
 }
 </script>
 <script>
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
 
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-  this.classList.toggle("active");
-  var dropdownContent = this.nextElementSibling;
-  if (dropdownContent.style.display === "block") {
-  dropdownContent.style.display = "none";
-  } else {
-  dropdownContent.style.display = "block";
-  }
-  });
-}
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
 </script>
              <div class="marquee" style="white-space:nowrap; width: 310px; float: right;">
-                 <h4><p style="margin: -1px 0px 0px 0px;">Good {{ temp1 }} {{ user.first_name }}. Hope you are well in this pandemic. Wear mask outside.</p></h4>
+                 <h4><p style="margin: -1px 0px 0px 0px;">
+                     Good {{ temp1 }} {{ user.first_name }}. Hope you are well in this pandemic. Wear mask outside.
+                    </p>
+                 </h4>
                  <br>
-                 <h4><p style="margin: -10px 0px 0px 0px; animation: scroll-left 17s linear infinite;">Lastest Gold Price Update: Per One Gram(24K) Gold Price is {{update.gold_price}} BDT, Updated on {{update.date}}</p></h4>
+                 <h4><p style="margin: -10px 0px 0px 0px; animation: scroll-left 17s linear infinite;">
+                     Lastest Gold Price Update: Per One Gram(24K) Gold Price is {{update.gold_price|floatformat:0|intcomma}} BDT,
+                     Updated on {{update.date}}
+                    </p>
+                 </h4>
              </div>
             <div class="flip-card" style="float:left;">
   <div class="flip-card-inner">

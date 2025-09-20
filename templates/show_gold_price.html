@@ -1,4 +1,6 @@
+<! DOCTYPE html>
 {% extends 'base.html' %}
+{% load humanize %}
 {% block content %}
 <! DOCTYPE html>
 <html lang="en">
@@ -29,7 +31,7 @@
 <body>
 <div style="white-space:nowrap">
     <h1>Gold Price History
-    <a href="/features/ " style="padding-left:585px"><button class="button" style="color: darkred; padding: 6px;"><span>Go Back</span></button></a></h1>
+    <a href="/myPanel/ " style="padding-left:585px"><button class="button" style="color: darkred; padding: 6px;"><span>Go Back</span></button></a></h1>
 </div>
     <h3 style="color: blue">For 24 Karat(one gram) gold.</h3>
     <br>
@@ -44,7 +46,7 @@
         <tr>
             <td>{{t.serial}}</td>
             <td>{{t.date}}</td>
-            <td>{{t.gold_price}} TK</td>
+            <td>{{t.gold_price|floatformat:0|intcomma}} TK</td>
         </tr>
         {% endfor %}
     </table>

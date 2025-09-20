@@ -445,29 +445,33 @@ header.masthead .masthead-heading {
   .sidenav a {font-size: 18px;}
 }
 
+.marquee-wrapper {
+  width: 100%;           /* full viewport width */
+  overflow: hidden;       /* hide overflow on both sides */
+  background-color: transparent; /* optional */
+}
 .marquee {
-  height: 50px;
-  overflow: hidden;       /* keeps it in one line */
-  position: relative;
-  background: transparent;
-  color: gold;
-  white-space: nowrap;
-}
-.marquee span {
   display: inline-block;
-  position: absolute;
-  will-change: transform;
-  transform: translateX(100%);
-  animation: scroll-left 15s linear infinite;
+  white-space: nowrap;
+  padding-left: 100%;     /* start fully off-screen right */
+  animation: marquee 15s linear infinite;
+  color: gold;
+  font-size: 1.2rem;
+  line-height: 50px;      /* adjust height */
 }
-@keyframes scroll-left {
+.marquee a {
+  color: orange;
+  text-decoration: none;
+}
+@keyframes marquee {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);
   }
 }
+
 
 
 

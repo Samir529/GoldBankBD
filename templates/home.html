@@ -1,11 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 {% load static %}
+{% load humanize %}
     <head>
         <title>Gold Bank</title>
         <link rel="icon" href="/static/assets/img/logo.jpg">
         <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
-        <link href="{% static 'css/outside5.css' %}" rel="stylesheet" />
+        <link href="{% static 'css/outside.css' %}" rel="stylesheet" />
     </head>
 
     <body id="page-top">
@@ -13,15 +14,15 @@
         <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
             <div class="container">
                 <div class="flip-card">
-  <div class="flip-card-inner">
-    <div class="flip-card-front">
-      <a href="#page-top"><img src="static/assets/img/logo.jpg" alt="Logo" width="60" height="60" /></a>
-    </div>
-    <div class="flip-card-back">
-      <a href="#page-top"><img src="static/assets/img/logo2.png" alt="Logo" width="60" height="60" /></a>
-    </div>
-  </div>
-</div>
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <a href="#page-top"><img src="static/assets/img/logo.jpg" alt="Logo" width="60" height="60" /></a>
+                        </div>
+                        <div class="flip-card-back">
+                            <a href="#page-top"><img src="static/assets/img/logo2.png" alt="Logo" width="60" height="60" /></a>
+                        </div>
+                    </div>
+                </div>
                 <a href="#page-top"><h1 style="text-align: left; color: gold;"><span class="highlightme" style="color: gold;">&nbsp;Gold Bank&nbsp;</span></h1></a>
                 <div class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto">
@@ -33,6 +34,7 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team" style="color: gold;">Team</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'admin:index' %}" style="color: gold;">Admin-site</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="about/" style="color: gold;">About</a></li>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div class="dropdown" style="float:right">
@@ -52,55 +54,56 @@
 <!--    <a href="adminPanel/">Admin Panel(Shortcut)</a>-->
 </div>
 <script>
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-</script>
-<script>
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+    <script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
 
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-  this.classList.toggle("active");
-  var dropdownContent = this.nextElementSibling;
-  if (dropdownContent.style.display === "block") {
-  dropdownContent.style.display = "none";
-  } else {
-  dropdownContent.style.display = "block";
-  }
-  });
-}
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var dropdownContent = this.nextElementSibling;
+      if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+      } else {
+      dropdownContent.style.display = "block";
+      }
+      });
+    }
 </script>
                     </ul>
                 </div>
             </div>
         </nav>
+
         <!-- Home-->
-<!--         style="margin-top: 0px;"-->
+<!--        style="margin-top: 0px;"-->
         <header class="masthead">
-            <div class="container">
-                <br>
-                <br>
-<!--                <form action="/action_page.php">-->
-                <div class="marquee" style="white-space:nowrap; width: 100%; float: middle;">
+            <br>
+            <br>
+            <div class="marquee-wrapper">
+                <div class="marquee">
                     <h3>
-                        <span>
-                            Latest Gold Price Update: Per One Gram (24K) Gold Price is
-                            <a style="color: orange">{{update.gold_price}} BDT</a>, Updated on {{update.date}}
-                        </span>
+                        Latest Gold Price Update: Per One Gram(24K) Gold Price is
+                        <a style="color: orange">{{ update.gold_price|floatformat:0|intcomma }} BDT</a>, Updated on {{update.date}}
                     </h3>
                 </div>
+            </div>
+            <div class="container">
+<!--                <form action="/action_page.php">-->
                 <div style="color:gainsboro;">
-                    <h3>Like Our Facebook Page <a class="btn btn-dark btn-social mx-2" href="https://web.facebook.com/Gold-Bank-103736558274705">
+                    <h3>Follow us on Facebook <a class="btn btn-dark btn-social mx-2" href="https://web.facebook.com/Gold-Bank-103736558274705">
                         <i class="fab fa-facebook"></i></a></h3></div>
                         <form>
                         <input type="text" placeholder="Search.." name="search">
-                        <button style="color:orange;" type="submit"><i class="fa fa-search"></i></button>
+                        <button style="color:tomato;" type="submit"><i class="fa fa-search"></i></button>
                         </form>
                 <br>
                 <div class="masthead-heading text-uppercase" style="color:gainsboro;">Welcome To Our Site!</div>
