@@ -272,7 +272,7 @@ header.masthead .masthead-heading {
   color: black;
 }
 .flip-card-back {
-  background-color: gray;
+  background-color: lightskyblue;
   color: white;
   transform: rotateY(180deg);
 }
@@ -445,12 +445,12 @@ header.masthead .masthead-heading {
   .sidenav a {font-size: 18px;}
 }
 
-.marquee-wrapper {
+.inside-marquee-wrapper {
   width: 100%;           /* full viewport width */
   overflow: hidden;       /* hide overflow on both sides */
   background-color: transparent; /* optional */
 }
-.marquee {
+.inside-marquee {
   display: inline-block;
   white-space: nowrap;
   padding-left: 100%;     /* start fully off-screen right */
@@ -459,7 +459,7 @@ header.masthead .masthead-heading {
   font-size: 1.2rem;
   line-height: 50px;      /* adjust height */
 }
-.marquee a {
+.inside-marquee a {
   color: orange;
   text-decoration: none;
 }
@@ -471,8 +471,6 @@ header.masthead .masthead-heading {
     transform: translateX(-100%);
   }
 }
-
-
 
 
 

@@ -184,53 +184,54 @@
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
 .marquee {
-height: 50px;
-overflow: hidden;
-position: relative;
-background: transparent;
-color: black;
-margin: 10px;
-#border: 1px solid #4a4a4a;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+  color: black;
+  margin: 10px;
+  #border: 1px solid #4a4a4a;
 }
 .marquee p {
-position: absolute;
-height: 100%;
-margin: 0;
--moz-transform: translateX(100%);
--webkit-transform: translateX(100%);
-transform: translateX(100%);
--moz-animation: scroll-left 2s linear infinite;
--webkit-animation: scroll-left 2s linear infinite;
-animation: scroll-left 12s linear infinite;
+  position: absolute;
+  height: 100%;
+  margin: 0;
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  -moz-animation: scroll-left 2s linear infinite;
+  -webkit-animation: scroll-left 2s linear infinite;
+  animation: scroll-left 12s linear infinite;
 }
 @-moz-keyframes scroll-left {
-0% {
--moz-transform: translateX(100%);
-}
-100% {
--moz-transform: translateX(-100%);
-}
+  0% {
+    -moz-transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+  }
 }
 @-webkit-keyframes scroll-left {
-0% {
--webkit-transform: translateX(100%);
-}
-100% {
--webkit-transform: translateX(-100%);
-}
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(-100%);
+  }
 }
 @keyframes scroll-left {
-0% {
--moz-transform: translateX(100%);
--webkit-transform: translateX(100%);
-transform: translateX(100%);
-}
-100% {
--moz-transform: translateX(-100%);
--webkit-transform: translateX(-100%);
-transform: translateX(-100%);
-}
+  0% {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
 }
 
 
